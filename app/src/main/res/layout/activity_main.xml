@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemsRV"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/newPrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ex: 4.99"
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/newItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/newName" />
+
+    <EditText
+        android:id="@+id/newName"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Item Name"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/newStore"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/newStore"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ex: https://example.com/my-item-url"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textSize="6pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/newItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/newPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
